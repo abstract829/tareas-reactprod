@@ -6,8 +6,8 @@ app.use( express.static('public') );
 app.use(cors())
 app.use(express.json())
 
-app.use('/tareas', require('./routes/tareas'))
-app.use('/users', require('./routes/users'))
+app.use('/api/tareas', require('./routes/tareas'))
+app.use('/api/users', require('./routes/users'))
 
 app.get('*', (req,res) =>{
     res.sendFile( path.resolve(__dirname, 'public/index.html'))
